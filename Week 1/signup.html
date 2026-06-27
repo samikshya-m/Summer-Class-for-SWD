@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Registration</title>
+    <link rel="stylesheet" href="first.css">
+  </head>
+  <body>
+    <h1>User Registration</h1>
+    <div id="part">
+      <h2>Personal Details</h2>
+      <form>
+        <div>
+          <label class="topics">First Name: </label>
+          <input class="informations" type="text" />
+        </div>
+        <div>
+          <label class="topics">Last Name: </label>
+          <input class="informations" type="text" />
+        </div>
+        <div>
+          <label class="topics">Age: </label>
+          <input class="informations" type="number" />
+        </div>
+        <div>
+          <label class="topics">Gender: </label>
+          <select  class="informations">
+            <option selected>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label class="topics" >Profile Picture: </label>
+          <button>Browse..</button>  No files selected.
+        </div>
+      </div>
+
+      <div id="part1">
+        <h2>Account Details</h2>
+        <div>
+          <label class="topics">Email: </label>
+          <input class="informations" type="email" />
+        </div>
+        <div>
+          <label class="topics">Password: </label>
+          <input class="informations" type="password" />
+        </div>
+        <div>
+          <label class="topics">Role: </label>
+          <label>Admin</label>
+          <input  type="radio" />
+          <label>User</label>
+          <input type="radio" />
+        </div>
+        <div><input class="topics" type="checkbox" />I agree with the terms and conditions.</div>
+        <div>
+          <button class="topics">Register</button>
+          <button class="topics">Reset</button>
+        </div>
+      </div>
+    </form>
+
+    <footer>© 2026 My TodoList. All rights reserved.</footer>
+  </body>
+</html>
