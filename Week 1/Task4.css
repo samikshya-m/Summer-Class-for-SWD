@@ -1,0 +1,30 @@
+body {
+  width: 1410px;
+}
+
+#title {
+  font-size: 25px;
+  font-weight: 550;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+hr {
+  width: 1410px;
+  height: 3px;
+  background-color: black;
+}
+
+.topics {
+  font-size: 18px;
+  font-weight: 550;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#note {
+  font-size: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-style: italic;
+}
