@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Understanding HTML Links & CSS</title>
+
+    <style>
+      /* 1. Global Reset Selector */
+      /* Applies to every single element to ensure cross-browser consistency */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* Explored below: includes padding & border in total width/height */
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f6f9;
+        color: #333;
+        line-height: 1.6; /* Gives space around the viewport edge */
+      }
+
+      /* Centering the main container element */
+      main {
+        width: 80%; /* Takes up 80% of the screen width */
+        margin: 0 auto; /* 0 top/bottom, auto left/right centers the block horizontally */
+        background: #ffffff;
+        padding: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+      }
+
+      /* Display Property Exploration */
+      nav {
+        margin-bottom: 20px;
+        background: #1d2833;
+        padding: 10px;
+        border-radius: 4px;
+      }
+
+      /* - Inline elements (like default <a>) don't respect top/bottom margins/padding or width/height.
+           - Inline-block lets them stay side-by-side but allows padding, margins, width, and height.
+        */
+      nav a {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        padding: 8px 16px; /* Fully respected because of inline-block */
+        margin-right: 5px;
+        background-color: #23303d;
+        border-radius: 4px;
+      }
+
+      nav a:hover {
+        background-color: #007bff;
+      }
+
+      /* Block elements take up the full width available and start on a new line */
+      h1,
+      h2,
+      p {
+        display: block;
+      }
+
+      p {
+        font-size: 16px;
+        background-color: #f9f9f9;
+        /* Box Model Properties */
+        padding: 15px; /* Inner space between content and border */
+        margin-bottom: 15px; /* Outer space between this paragraph and the next element */
+        border-left: 4px solid #007bff;
+      }
+
+      .highlight {
+        background-color: #fff3cd;
+        color: #856404;
+        border-left-color: #ffc107;
+      }
+
+      #main-definition {
+        background-color: #d1ecf1;
+        color: #0c5460;
+        border-left-color: #17a2b8;
+      }
+
+      .force-alert {
+        background-color: #f8d7da !important;
+        color: #721c24 !important;
+        border-left-color: #dc3545 !important;
+      }
+
+      ul {
+        margin-left: 20px;
+        margin-top: 10px;
+      }
+
+      li {
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+    <main>
+      <h1>Understanding HTML Links</h1>
+
+      <p id="main-definition" class="force-alert">
+        Hyperlinks are the backbone of the web. They allow users to navigate
+        between pages seamlessly. Below, we explore the two main types of links:
+        <span
+          style="font-weight: bold; text-decoration: underline; color: #dc3545"
+          >Absolute</span
+        >
+        and <strong>Relative</strong>.
+      </p>
+
+      <h2>1. Absolute Linking</h2>
+      <p>
+        Absolute links point to a specific, full URL on the internet. They must
+        include the protocol (like https://) and the domain name. These are
+        typically used to link to external websites.
+      </p>
+      <p>
+        <strong>Example:</strong> Learn more about web development by visiting
+        the
+        <a href="https://en.wikipedia.org/wiki/HTTP" target="_blank"
+          >Wikipedia page for HTTP</a
+        >.
+      </p>
+
+      <h2>2. Relative Linking</h2>
+      <p class="highlight">
+        Relative links point to a file relative to the current file's location
+        on the same server. They do not include the protocol or domain name.
+        These are ideal for linking pages within your own website because if you
+        change your domain name, the links won't break.
+      </p>
+
+      <div>
+        <strong>Examples:</strong>
+        <ul>
+          <li>
+            Read our <a href="about.html">About Us</a> page to meet the team.
+          </li>
+          <li>
+            Check out our <a href="privacy.html">Privacy Policy</a> to see how
+            we handle data.
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
