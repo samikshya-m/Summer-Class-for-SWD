@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #faf7f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.container {
+  width: 1200px;
+  max-width: 95%;
+  min-height: 850px;
+  display: flex;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+}
+
+#left-sidebar {
+  width: 40%;
+  background: #ed8973;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+#left-sidebar::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: #f7c8b5;
+  top: -130px;
+  left: -130px;
+}
+
+#left-sidebar::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #f5c76b;
+  bottom: -120px;
+  right: -100px;
+}
+
+#left-sidebar img {
+  width: 300px;
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+}
+#right-sidebar {
+  width: 60%;
+  background: #ffffff;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#right-sidebar form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  text-align: center;
+  color: #3d3030;
+  margin-bottom: 10px;
+}
+
+#welcome-message {
+  text-align: center;
+  color: #666;
+  margin-bottom: 35px;
+  font-size: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #3b2f2f;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5d3ce;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  transition: 0.3s;
+  background: #fff;
+}
+
+.input-box:hover {
+  border-color: #d99a86;
+}
+
+.input-box:focus-within {
+  border-color: #ed8973;
+  box-shadow: 0 0 0 4px rgba(237, 137, 115, 0.15);
+}
+
+.input-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  background: transparent;
+}
+
+.input-box input::placeholder {
+  color: #aaa;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin: 12px 0 22px;
+  font-size: 13px;
+  color: #666;
+}
+
+.remember input {
+  accent-color: #d99a86;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #ed8973;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #df7963;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(20, 36, 61, 0.25);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider span {
+  margin: 0 18px;
+  color: #888;
+  font-size: 13px;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.social {
+  flex: 1;
+  padding: 13px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+}
+
+.social i {
+  margin-right: 8px;
+}
+
+.social:hover {
+  transform: translateY(-2px);
+  border-color: #d99a86;
+}
+
+.signup {
+  text-align: center;
+  margin-top: 25px;
+  color: #666;
+  font-size: 14px;
+}
+
+.signup a {
+  text-decoration: none;
+  color: #ed8973;
+  font-weight: 600;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  #left-sidebar,
+  #right-sidebar {
+    width: 100%;
+  }
+
+  #left-sidebar {
+    min-height: 280px;
+    padding: 40px;
+  }
+
+  #left-sidebar img {
+    width: 220px;
+  }
+
+  #right-sidebar {
+    padding: 50px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  #right-sidebar {
+    padding: 40px 25px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+  }
+}

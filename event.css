@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #faf7f2;
+  color: #3d3030;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: #ed8973;
+  color: #3d3030;
+  padding: 30px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: #f6b9a9;
+  border-radius: 50%;
+  top: -130px;
+  left: -100px;
+}
+
+.sidebar::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: #f2b765;
+  border-radius: 50%;
+  bottom: -90px;
+  right: -80px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.logo img {
+  width: 180px;
+  max-width: 100%;
+}
+
+.sidebar ul {
+  list-style: none;
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.sidebar li.active {
+  background: #ffffff;
+  color: #ed8973;
+  font-weight: 600;
+}
+
+.main {
+  flex: 1;
+  padding: 40px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  color: #3d3030;
+}
+
+header p {
+  color: #777;
+  margin-top: 5px;
+}
+
+.add-btn {
+  border: none;
+  background: #ed8973;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #df7963;
+  transform: translateY(-2px);
+}
+
+.add-btn a {
+  color: white;
+}
+
+.search-bar {
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0e1dc;
+}
+
+.search-bar i {
+  color: #ed8973;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+.table-section {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0e1dc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #3d3030;
+  color: white;
+}
+
+th,
+td {
+  padding: 18px;
+  text-align: left;
+}
+
+th {
+  font-weight: 500;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: 0.3s;
+}
+
+tbody tr:hover {
+  background: #fff8f5;
+}
+
+.view,
+.edit {
+  border: none;
+  padding: 9px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+}
+
+.view {
+  background: #3d3030;
+  color: white;
+}
+
+.edit {
+  background: #ed8973;
+  color: white;
+  margin-left: 10px;
+}
+
+.view:hover {
+  background: #ed8973;
+}
+
+.edit:hover {
+  background: #df7963;
+}
+
+@media (max-width: 1100px) {
+  .main {
+    padding: 30px;
+  }
+
+  .table-section {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .sidebar li {
+    margin-bottom: 0;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .add-btn {
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 25px 15px;
+  }
+
+  header h1 {
+    font-size: 36px;
+  }
+
+  .sidebar ul {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff9f2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.container {
+  width: 1000px;
+  max-width: 95%;
+  min-height: 650px;
+
+  display: flex;
+
+  background: #ffffff;
+  border-radius: 30px;
+  overflow: hidden;
+
+  box-shadow: 0 25px 60px rgba(59, 47, 47, 0.12);
+}
+
+#left-sidebar {
+  width: 40%;
+
+  background: #e98973;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 60px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+#left-sidebar::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  background: #f7c8b5;
+  border-radius: 50%;
+
+  top: -130px;
+  left: -130px;
+
+  opacity: 0.8;
+}
+
+#left-sidebar::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  background: #f5c76b;
+  border-radius: 50%;
+
+  bottom: -140px;
+  right: -100px;
+
+  opacity: 0.7;
+}
+
+#left-sidebar img {
+  width: 280px;
+  max-width: 100%;
+
+  position: relative;
+  z-index: 1;
+}
+
+#right-sidebar {
+  width: 60%;
+
+  background: #ffffff;
+
+  padding: 60px 70px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 48px;
+  text-align: center;
+
+  color: #3b2f2f;
+
+  margin-bottom: 12px;
+}
+
+#welcome-message {
+  text-align: center;
+
+  color: #6b5a56;
+
+  margin-bottom: 40px;
+
+  font-size: 16px;
+}
+
+label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-weight: 500;
+
+  color: #3b2f2f;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #e3d7d1;
+
+  border-radius: 14px;
+
+  padding: 15px 18px;
+
+  margin-bottom: 25px;
+
+  transition: 0.3s;
+}
+
+.input-box:hover {
+  border-color: #e98973;
+}
+
+.input-box:focus-within {
+  border-color: #e98973;
+
+  box-shadow: 0 0 0 4px rgba(233, 137, 115, 0.15);
+}
+
+.input-box input {
+  flex: 1;
+
+  border: none;
+  outline: none;
+
+  font-size: 15px;
+
+  font-family: "Poppins", sans-serif;
+
+  background: transparent;
+}
+
+.options {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  font-size: 14px;
+}
+
+.remember {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  cursor: pointer;
+}
+
+.remember input {
+  accent-color: #e98973;
+}
+
+.options a {
+  text-decoration: none;
+
+  color: #e98973;
+
+  font-weight: 500;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  background: #e98973;
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #d8735d;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px rgba(233, 137, 115, 0.3);
+}
+
+.divider {
+  display: flex;
+
+  align-items: center;
+
+  margin: 35px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background: #eadfd9;
+}
+
+.divider span {
+  margin: 0 18px;
+
+  color: #9a8983;
+
+  font-size: 14px;
+}
+
+.social-buttons {
+  display: flex;
+
+  gap: 15px;
+}
+
+.social {
+  flex: 1;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  border: 1px solid #e3d7d1;
+
+  background: white;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+.social i {
+  margin-right: 10px;
+}
+
+.social:hover {
+  transform: translateY(-3px);
+
+  border-color: #e98973;
+
+  background: #fff9f2;
+}
+
+.signup {
+  text-align: center;
+
+  margin-top: 35px;
+
+  color: #6b5a56;
+}
+
+.signup a {
+  text-decoration: none;
+
+  color: #e98973;
+
+  font-weight: 600;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+
+    min-height: auto;
+  }
+
+  #left-sidebar {
+    width: 100%;
+
+    height: 220px;
+  }
+
+  #left-sidebar img {
+    width: 200px;
+  }
+
+  #right-sidebar {
+    width: 100%;
+
+    padding: 50px 35px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  #right-sidebar {
+    padding: 40px 25px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+  }
+
+  .options {
+    font-size: 12px;
+  }
+}
