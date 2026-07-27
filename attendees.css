@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f7f3ec;
+  color: #2c2c2c;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
 
 .sidebar {
   width: 260px;
