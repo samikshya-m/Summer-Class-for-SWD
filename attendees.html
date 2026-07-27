@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,51 +24,40 @@
 
   <body>
     <div class="container">
-
-      <!-- SIDEBAR -->
-      <aside class="sidebar">
+      <div class="sidebar">
         <div class="logo">
-          <img src="images/orilogo.png" alt="Memoria Logo" />
+          <img src="images/orilogo.png" />
         </div>
+        <ul>
+          <li>
+            <i class="fa-solid fa-house"></i
+            ><a href="dashboard.html">Dashboard</a>
+          </li>
 
-        <nav class="nav-menu">
-          <a href="dashboard.html">
-            <i class="fa-solid fa-house"></i>
-            Dashboard
-          </a>
-
-          <a href="events.html">
+          <li>
             <i class="fa-solid fa-calendar-days"></i>
-            Events
-          </a>
+            <a href="event.html">Events</a>
+          </li>
 
-          <a href="addEvent.html">
-            <i class="fa-solid fa-plus"></i>
-            Add Event
-          </a>
-
-          <a href="attendees.html" class="active">
+          <li class="active">
             <i class="fa-solid fa-users"></i>
-            Attendees
-          </a>
+            <a href="#">Attendees</a>
+          </li>
 
-          <a href="notifications.html">
-            <i class="fa-solid fa-bell"></i>
-            Notifications
-          </a>
-        </nav>
+          <li>
+            <i class="fa-solid fa-user-plus"></i>
+            <a href="#">Registration</a>
+          </li>
 
-        <div class="logout">
-          <a href="login.html">
+          <li>
             <i class="fa-solid fa-right-from-bracket"></i>
-            Logout
-          </a>
-        </div>
-      </aside>
+            <a href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
 
       <!-- MAIN CONTENT -->
       <main class="main-content">
-
         <!-- TOP BAR -->
         <header class="top-bar">
           <div>
@@ -114,7 +103,6 @@
 
         <!-- STATS -->
         <section class="stats">
-
           <div class="stat-card">
             <div class="stat-icon green">
               <i class="fa-solid fa-users"></i>
@@ -147,12 +135,10 @@
               <h3>32</h3>
             </div>
           </div>
-
         </section>
 
         <!-- ATTENDEE TABLE -->
         <section class="attendees-section">
-
           <div class="section-top">
             <div>
               <h2>Registered Attendees</h2>
@@ -161,16 +147,12 @@
 
             <div class="search-box">
               <i class="fa-solid fa-magnifying-glass"></i>
-              <input
-                type="text"
-                placeholder="Search attendees..."
-              />
+              <input type="text" placeholder="Search attendees..." />
             </div>
           </div>
 
           <div class="table-container">
             <table>
-
               <thead>
                 <tr>
                   <th>Attendee</th>
@@ -182,13 +164,10 @@
               </thead>
 
               <tbody>
-
                 <tr>
                   <td>
                     <div class="attendee-info">
-                      <div class="attendee-avatar avatar-one">
-                        AS
-                      </div>
+                      <div class="attendee-avatar avatar-one">AS</div>
 
                       <div>
                         <strong>Anisha Shrestha</strong>
@@ -218,9 +197,7 @@
                 <tr>
                   <td>
                     <div class="attendee-info">
-                      <div class="attendee-avatar avatar-two">
-                        RK
-                      </div>
+                      <div class="attendee-avatar avatar-two">RK</div>
 
                       <div>
                         <strong>Rohan Karki</strong>
@@ -250,9 +227,7 @@
                 <tr>
                   <td>
                     <div class="attendee-info">
-                      <div class="attendee-avatar avatar-three">
-                        PS
-                      </div>
+                      <div class="attendee-avatar avatar-three">PS</div>
 
                       <div>
                         <strong>Pratik Shahi</strong>
@@ -282,9 +257,7 @@
                 <tr>
                   <td>
                     <div class="attendee-info">
-                      <div class="attendee-avatar avatar-four">
-                        SN
-                      </div>
+                      <div class="attendee-avatar avatar-four">SN</div>
 
                       <div>
                         <strong>Sneha Nepal</strong>
@@ -310,7 +283,6 @@
                     </button>
                   </td>
                 </tr>
-
               </tbody>
             </table>
           </div>
@@ -333,9 +305,7 @@
               </button>
             </div>
           </div>
-
         </section>
-
       </main>
     </div>
   </body>
