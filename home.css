@@ -277,6 +277,100 @@ button:hover {
   box-shadow: 0 10px 25px rgba(27, 58, 47, 0.25);
 }
 
+.footer {
+  background-color: #1b3a2f;
+  color: #ffffff;
+  padding: 70px 8% 0;
+  margin-top: 80px;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 60px;
+
+  padding-bottom: 55px;
+}
+
+.footer-brand img {
+  width: 150px;
+  margin-bottom: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-brand p {
+  max-width: 300px;
+  color: #dfeee6;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.footer h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  margin-bottom: 22px;
+  color: #f3ddc9;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #dfeee6;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f3ddc9;
+  padding-left: 5px;
+}
+
+.footer-contact p {
+  color: #dfeee6;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #f3ddc9;
+  color: #1b3a2f;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 22px 0;
+}
+
+.footer-bottom p {
+  color: #c8d8d0;
+  font-size: 13px;
+}
+
 @media (max-width: 900px) {
   #upper-bar {
     padding: 20px 30px;
@@ -329,3 +423,4 @@ button:hover {
     padding: 20px 25px;
   }
 }
+
