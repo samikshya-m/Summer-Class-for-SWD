@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
   margin: 0;
@@ -8,20 +8,20 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #fff9f2;
-  color: #3b2f2f;
+  background-color: #f7f3ec; /* warm cream, matches dashboard */
+  color: #2c2c2c;
 }
 
 h1,
 h2,
 h3,
 #first {
-  font-family: "DM Serif Display", serif;
+  font-family: "Playfair Display", serif;
 }
 
 #top-part {
   min-height: 650px;
-  background-color: #fff9f2;
+  background-color: #f7f3ec;
   position: relative;
   overflow: hidden;
 }
@@ -31,11 +31,11 @@ h3,
   position: absolute;
   width: 450px;
   height: 450px;
-  background-color: #f7c8b5;
+  background-color: #dfeee6; /* soft green tint, replaces peach circle */
   border-radius: 50%;
   top: -220px;
   right: -100px;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 #top-part::after {
@@ -43,11 +43,11 @@ h3,
   position: absolute;
   width: 250px;
   height: 250px;
-  background-color: #f5c76b;
+  background-color: #f3ddc9; /* soft terracotta/gold tint */
   border-radius: 50%;
   bottom: -150px;
   left: -80px;
-  opacity: 0.35;
+  opacity: 0.45;
 }
 
 #upper-bar {
@@ -73,14 +73,14 @@ h3,
 
 .buttons a {
   text-decoration: none;
-  color: #3b2f2f;
+  color: #2c2c2c;
 }
 
 button {
   border: none;
   cursor: pointer;
   padding: 12px 25px;
-  border-radius: 30px;
+  border-radius: 8px; /* squarer, matches dashboard buttons */
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   transition: 0.3s ease;
@@ -92,18 +92,18 @@ button:hover {
 
 #login-button {
   background: transparent;
-  color: #3b2f2f;
+  color: #2c2c2c;
 }
 
 #login-button:hover {
-  background-color: #f7c8b5;
+  background-color: #ece7dc;
 }
 
 #signing-button {
-  background-color: #e98973;
+  background-color: #1b3a2f; /* deep forest green */
   color: white;
   font-weight: 500;
-  box-shadow: 0 8px 20px rgba(233, 137, 115, 0.3);
+  box-shadow: 0 8px 20px rgba(27, 58, 47, 0.25);
 }
 
 #signing-button a {
@@ -111,7 +111,7 @@ button:hover {
 }
 
 #signing-button:hover {
-  background-color: #d8735d;
+  background-color: #2d5a47; /* lighter green hover */
 }
 
 #middle-bar {
@@ -132,31 +132,31 @@ button:hover {
 #first {
   font-size: clamp(48px, 7vw, 88px);
   line-height: 1.1;
-  font-weight: 400;
-  color: #3b2f2f;
+  font-weight: 500;
+  color: #1b1b1b;
   max-width: 1000px;
 }
 
 #first span {
-  color: #e98973;
+  color: #a8543e; /* rust/terracotta, matches the logo mark */
 }
 
 #slogan {
   margin-top: 35px;
   letter-spacing: 5px;
-  color: #e98973;
+  color: #a8543e;
   font-size: 15px;
   font-weight: 500;
 }
 
 #name {
   margin-top: 20px;
-  color: #6b5a56;
+  color: #6b6b6b;
   font-size: 20px;
 }
 
 #bottom-part {
-  background-color: #fff9f2;
+  background-color: #f7f3ec;
   padding: 100px 0 80px;
 }
 
@@ -178,20 +178,20 @@ button:hover {
 }
 
 .about-text h2 {
-  color: #3b2f2f;
+  color: #1b1b1b;
   font-size: 48px;
   margin-bottom: 25px;
 }
 
 .about-text h3 {
-  color: #e98973;
+  color: #a8543e;
   margin-top: 45px;
   font-size: 30px;
   margin-bottom: 18px;
 }
 
 .about-text p {
-  color: #6b5a56;
+  color: #6b6b6b;
   line-height: 2;
   font-size: 17px;
 }
@@ -200,12 +200,13 @@ button:hover {
   flex: 1.2;
   max-width: 700px;
 
-  background-color: #f7c8b5;
+  background-color: #ffffff;
 
-  border-radius: 30px;
+  border-radius: 16px;
   padding: 18px;
+  border: 1px solid #ece7dc;
 
-  box-shadow: 0 20px 50px rgba(59, 47, 47, 0.12);
+  box-shadow: 0 20px 50px rgba(44, 44, 44, 0.08);
 }
 
 .image ul {
@@ -224,14 +225,14 @@ button:hover {
   height: 100%;
 
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 12px;
 
   transition: 0.3s ease;
 }
 
 .image img:hover {
   transform: scale(1.04);
-  box-shadow: 0 12px 25px rgba(59, 47, 47, 0.25);
+  box-shadow: 0 12px 25px rgba(27, 58, 47, 0.2);
 }
 
 .image li:nth-child(1) {
@@ -263,17 +264,17 @@ button:hover {
   width: fit-content;
   margin: 80px auto 0;
 
-  background-color: #e98973;
+  background-color: #1b3a2f; /* forest green instead of coral */
   color: white;
 
   padding: 25px 45px;
-  border-radius: 40px;
+  border-radius: 16px;
 
   text-align: center;
   font-size: 26px;
-  font-family: "DM Serif Display", serif;
+  font-family: "Playfair Display", serif;
 
-  box-shadow: 0 10px 25px rgba(233, 137, 115, 0.25);
+  box-shadow: 0 10px 25px rgba(27, 58, 47, 0.25);
 }
 
 @media (max-width: 900px) {

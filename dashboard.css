@@ -6,8 +6,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #faf7f2;
-  color: #3d3030;
+  background: #faf6ef;
+  color: #2b2b2b;
 }
 
 .container {
@@ -17,8 +17,8 @@ body {
 
 .sidebar {
   width: 260px;
-  background: #ed8973;
-  color: #3d3030;
+  background: #ffffff;
+  color: #2b2b2b;
   padding: 30px 20px;
   position: relative;
   overflow: hidden;
@@ -29,7 +29,7 @@ body {
   position: absolute;
   width: 250px;
   height: 250px;
-  background: #f6b9a9;
+  background: #faf6ef;
   border-radius: 50%;
   top: -130px;
   left: -100px;
@@ -40,7 +40,7 @@ body {
   position: absolute;
   width: 180px;
   height: 180px;
-  background: #f2b765;
+  background: #f4efe6;
   border-radius: 50%;
   bottom: -90px;
   right: -80px;
@@ -76,12 +76,12 @@ body {
 }
 
 .sidebar ul li:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(44, 62, 52, 0.08);
 }
 
 .sidebar ul li.active {
-  background: #ffffff;
-  color: #ed8973;
+  background: #2c3e34;
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -110,7 +110,7 @@ header {
 header h1 {
   font-family: "Playfair Display", serif;
   font-size: 42px;
-  color: #3d3030;
+  color: #2b2b2b;
 }
 
 header p {
@@ -127,12 +127,12 @@ header p {
 .profile i {
   font-size: 22px;
   cursor: pointer;
-  color: #3d3030;
+  color: #2b2b2b;
   transition: 0.3s;
 }
 
 .profile i:hover {
-  color: #ed8973;
+  color: #2c3e34;
 }
 
 .cards {
@@ -148,23 +148,23 @@ header p {
   padding: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   transition: 0.3s;
-  border: 1px solid #f0e1dc;
+  border: 1px solid #ece5d8;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(237, 137, 115, 0.15);
+  box-shadow: 0 15px 35px rgba(44, 62, 52, 0.15);
 }
 
 .card i {
   font-size: 34px;
-  color: #ed8973;
+  color: #2c3e34;
   margin-bottom: 20px;
 }
 
 .card h2 {
   font-size: 38px;
-  color: #3d3030;
+  color: #2b2b2b;
 }
 
 .card p {
@@ -177,7 +177,7 @@ header p {
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-  border: 1px solid #f0e1dc;
+  border: 1px solid #ece5d8;
 }
 
 .table-header {
@@ -189,11 +189,11 @@ header p {
 
 .table-header h2 {
   font-family: "Playfair Display", serif;
-  color: #3d3030;
+  color: #2b2b2b;
 }
 
 .table-header button {
-  background: #ed8973;
+  background: #2c3e34;
   color: white;
   border: none;
   padding: 12px 22px;
@@ -205,7 +205,7 @@ header p {
 }
 
 .table-header button:hover {
-  background: #df7963;
+  background: #22322a;
   transform: translateY(-2px);
 }
 
@@ -215,10 +215,13 @@ table {
 }
 
 table th {
-  background: #3d3030;
-  color: white;
+  background: transparent;
+  color: #8a8a8a;
   padding: 16px;
   text-align: left;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
 }
 
 table th:first-child {
@@ -235,7 +238,7 @@ table td {
 }
 
 table tr:hover {
-  background: #fff8f5;
+  background: #faf9f5;
 }
 
 .status {
@@ -246,8 +249,8 @@ table tr:hover {
 }
 
 .upcoming {
-  background: #fff0eb;
-  color: #ed8973;
+  background: #eaf1ec;
+  color: #2c3e34;
 }
 
 .completed {
@@ -256,7 +259,7 @@ table tr:hover {
 }
 
 table button {
-  background: #3d3030;
+  background: #2c3e34;
   color: white;
   border: none;
   padding: 8px 18px;
@@ -266,7 +269,7 @@ table button {
 }
 
 table button:hover {
-  background: #ed8973;
+  background: #22322a;
 }
 
 @media (max-width: 1100px) {
