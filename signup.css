@@ -6,68 +6,103 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #faf7f2;
+  background-color: #f7f3ec;
+  color: #2c2c2c;
+
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+
   padding: 30px;
 }
 
+/* ================= MAIN CONTAINER ================= */
+
 .container {
-  width: 1200px;
+  width: 1100px;
   max-width: 95%;
-  min-height: 850px;
+  min-height: 750px;
+
   display: flex;
-  border-radius: 28px;
+
+  background-color: #ffffff;
+  border-radius: 20px;
   overflow: hidden;
-  background: #ffffff;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+
+  box-shadow: 0 25px 60px rgba(44, 44, 44, 0.12);
 }
+
+/* ================= LEFT SIDE ================= */
 
 #left-sidebar {
   width: 40%;
-  background: #ed8973;
+
+  background-color: #1b3a2f;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding: 60px;
+
   position: relative;
   overflow: hidden;
 }
 
 #left-sidebar::before {
   content: "";
+
   position: absolute;
-  width: 420px;
-  height: 420px;
+
+  width: 400px;
+  height: 400px;
+
+  background-color: #dfeee6;
   border-radius: 50%;
-  background: #f7c8b5;
-  top: -130px;
-  left: -130px;
+
+  top: -180px;
+  left: -150px;
+
+  opacity: 0.35;
 }
 
 #left-sidebar::after {
   content: "";
+
   position: absolute;
+
   width: 300px;
   height: 300px;
+
+  background-color: #f3ddc9;
   border-radius: 50%;
-  background: #f5c76b;
-  bottom: -120px;
+
+  bottom: -150px;
   right: -100px;
+
+  opacity: 0.35;
 }
 
 #left-sidebar img {
-  width: 300px;
+  width: 280px;
   max-width: 100%;
+
   position: relative;
   z-index: 1;
+
+  filter: brightness(0) invert(1);
 }
+
+/* ================= RIGHT SIDE ================= */
+
 #right-sidebar {
   width: 60%;
-  background: #ffffff;
-  padding: 60px 80px;
+
+  background-color: #ffffff;
+
+  padding: 55px 70px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,132 +111,196 @@ body {
 #right-sidebar form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
+
+/* ================= HEADINGS ================= */
 
 h1 {
   font-family: "Playfair Display", serif;
+
   font-size: 48px;
   text-align: center;
-  color: #3d3030;
-  margin-bottom: 10px;
+
+  color: #1b1b1b;
+
+  margin-bottom: 12px;
 }
 
 #welcome-message {
   text-align: center;
-  color: #666;
+
+  color: #6b6b6b;
+
   margin-bottom: 35px;
+
   font-size: 15px;
 }
 
+/* ================= FORM ================= */
+
 label {
   display: block;
-  margin-bottom: 8px;
+
+  margin-bottom: 9px;
+
   font-weight: 500;
-  color: #3b2f2f;
+
+  color: #2c2c2c;
 }
 
 .input-box {
   display: flex;
   align-items: center;
-  border: 1px solid #e5d3ce;
-  border-radius: 12px;
+
+  border: 1px solid #ece7dc;
+
+  border-radius: 10px;
+
   padding: 14px 18px;
-  margin-bottom: 14px;
+
+  margin-bottom: 18px;
+
   transition: 0.3s;
-  background: #fff;
+
+  background-color: #ffffff;
 }
 
 .input-box:hover {
-  border-color: #d99a86;
+  border-color: #a8543e;
 }
 
 .input-box:focus-within {
-  border-color: #ed8973;
-  box-shadow: 0 0 0 4px rgba(237, 137, 115, 0.15);
+  border-color: #a8543e;
+
+  box-shadow: 0 0 0 4px rgba(168, 84, 62, 0.12);
 }
 
 .input-box input {
   width: 100%;
+
   border: none;
   outline: none;
+
   font-size: 15px;
+
   font-family: "Poppins", sans-serif;
+
   background: transparent;
 }
 
 .input-box input::placeholder {
-  color: #aaa;
+  color: #a0a0a0;
 }
+
+/* ================= TERMS ================= */
 
 .remember {
   display: flex;
   align-items: center;
+
   gap: 8px;
+
   cursor: pointer;
-  margin: 12px 0 22px;
+
+  margin: 8px 0 22px;
+
   font-size: 13px;
-  color: #666;
+
+  color: #6b6b6b;
 }
 
 .remember input {
-  accent-color: #d99a86;
+  accent-color: #1b3a2f;
 }
+
+/* ================= SIGNUP BUTTON ================= */
 
 .login-btn {
   width: 100%;
+
   padding: 16px;
+
   border: none;
-  border-radius: 12px;
+
+  border-radius: 10px;
+
   cursor: pointer;
-  background: #ed8973;
+
+  background-color: #1b3a2f;
+
   color: #ffffff;
+
   font-size: 16px;
-  font-weight: 600;
+
+  font-weight: 500;
+
   font-family: "Poppins", sans-serif;
+
   transition: 0.3s;
 }
 
 .login-btn:hover {
-  background: #df7963;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(20, 36, 61, 0.25);
+  background-color: #2d5a47;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px rgba(27, 58, 47, 0.25);
 }
+
+/* ================= DIVIDER ================= */
 
 .divider {
   display: flex;
+
   align-items: center;
-  margin: 25px 0;
+
+  margin: 28px 0;
 }
 
 .divider::before,
 .divider::after {
   content: "";
+
   flex: 1;
+
   height: 1px;
-  background: #ddd;
+
+  background-color: #ece7dc;
 }
 
 .divider span {
   margin: 0 18px;
-  color: #888;
+
+  color: #9a9a9a;
+
   font-size: 13px;
 }
 
+/* ================= SOCIAL BUTTONS ================= */
+
 .social-buttons {
   display: flex;
+
   gap: 15px;
 }
 
 .social {
   flex: 1;
-  padding: 13px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  background: #ffffff;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  border: 1px solid #ece7dc;
+
+  background-color: #ffffff;
+
   cursor: pointer;
+
   font-size: 14px;
+
   font-family: "Poppins", sans-serif;
+
   transition: 0.3s;
 }
 
@@ -210,20 +309,30 @@ label {
 }
 
 .social:hover {
-  transform: translateY(-2px);
-  border-color: #d99a86;
+  transform: translateY(-3px);
+
+  border-color: #1b3a2f;
+
+  background-color: #f7f3ec;
 }
+
+/* ================= LOGIN LINK ================= */
 
 .signup {
   text-align: center;
-  margin-top: 25px;
-  color: #666;
+
+  margin-top: 28px;
+
+  color: #6b6b6b;
+
   font-size: 14px;
 }
 
 .signup a {
   text-decoration: none;
-  color: #ed8973;
+
+  color: #a8543e;
+
   font-weight: 600;
 }
 
@@ -231,9 +340,12 @@ label {
   text-decoration: underline;
 }
 
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
+
     min-height: auto;
   }
 
@@ -243,7 +355,8 @@ label {
   }
 
   #left-sidebar {
-    min-height: 280px;
+    min-height: 250px;
+
     padding: 40px;
   }
 
@@ -263,6 +376,7 @@ label {
 
   .container {
     max-width: 100%;
+
     border-radius: 20px;
   }
 
