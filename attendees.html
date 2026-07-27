@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="attendees.css" />
+
+    <title>Attendees</title>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="images/orilogo.png" alt="Memoria Logo" />
+        </div>
+
+        <nav class="nav-menu">
+          <a href="dashboard.html">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+          </a>
+
+          <a href="events.html">
+            <i class="fa-solid fa-calendar-days"></i>
+            Events
+          </a>
+
+          <a href="addEvent.html">
+            <i class="fa-solid fa-plus"></i>
+            Add Event
+          </a>
+
+          <a href="attendees.html" class="active">
+            <i class="fa-solid fa-users"></i>
+            Attendees
+          </a>
+
+          <a href="notifications.html">
+            <i class="fa-solid fa-bell"></i>
+            Notifications
+          </a>
+        </nav>
+
+        <div class="logout">
+          <a href="login.html">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+          </a>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="top-bar">
+          <div>
+            <p class="small-heading">EVENT MANAGEMENT</p>
+            <h1>Attendees</h1>
+          </div>
+
+          <div class="user-section">
+            <div class="notification">
+              <i class="fa-regular fa-bell"></i>
+              <span>3</span>
+            </div>
+
+            <div class="user-info">
+              <div class="avatar">SM</div>
+              <div>
+                <strong>Samikshya Maharjan</strong>
+                <p>Event Organizer</p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- EVENT SELECTOR -->
+        <section class="event-header">
+          <div>
+            <p class="section-label">CURRENT EVENT</p>
+            <h2>Web Application Bootcamp</h2>
+            <p class="event-details">
+              <i class="fa-regular fa-calendar"></i>
+              July 30, 2026
+              <span>•</span>
+              <i class="fa-solid fa-location-dot"></i>
+              Herald College Kathmandu
+            </p>
+          </div>
+
+          <button class="export-btn">
+            <i class="fa-solid fa-download"></i>
+            Export List
+          </button>
+        </section>
+
+        <!-- STATS -->
+        <section class="stats">
+
+          <div class="stat-card">
+            <div class="stat-icon green">
+              <i class="fa-solid fa-users"></i>
+            </div>
+
+            <div>
+              <p>Total Attendees</p>
+              <h3>128</h3>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon orange">
+              <i class="fa-solid fa-user-check"></i>
+            </div>
+
+            <div>
+              <p>Checked In</p>
+              <h3>96</h3>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon blue">
+              <i class="fa-solid fa-user-clock"></i>
+            </div>
+
+            <div>
+              <p>Pending</p>
+              <h3>32</h3>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ATTENDEE TABLE -->
+        <section class="attendees-section">
+
+          <div class="section-top">
+            <div>
+              <h2>Registered Attendees</h2>
+              <p>View and manage people registered for this event.</p>
+            </div>
+
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                type="text"
+                placeholder="Search attendees..."
+              />
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table>
+
+              <thead>
+                <tr>
+                  <th>Attendee</th>
+                  <th>Email</th>
+                  <th>Registration Date</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>
+                    <div class="attendee-info">
+                      <div class="attendee-avatar avatar-one">
+                        AS
+                      </div>
+
+                      <div>
+                        <strong>Anisha Shrestha</strong>
+                        <p>Participant</p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>anisha@gmail.com</td>
+
+                  <td>July 20, 2026</td>
+
+                  <td>
+                    <span class="status checked">
+                      <i class="fa-solid fa-circle"></i>
+                      Checked In
+                    </span>
+                  </td>
+
+                  <td>
+                    <button class="action-btn">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="attendee-info">
+                      <div class="attendee-avatar avatar-two">
+                        RK
+                      </div>
+
+                      <div>
+                        <strong>Rohan Karki</strong>
+                        <p>Participant</p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>rohan@gmail.com</td>
+
+                  <td>July 21, 2026</td>
+
+                  <td>
+                    <span class="status pending">
+                      <i class="fa-solid fa-circle"></i>
+                      Pending
+                    </span>
+                  </td>
+
+                  <td>
+                    <button class="action-btn">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="attendee-info">
+                      <div class="attendee-avatar avatar-three">
+                        PS
+                      </div>
+
+                      <div>
+                        <strong>Pratik Shahi</strong>
+                        <p>Participant</p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>pratik@gmail.com</td>
+
+                  <td>July 22, 2026</td>
+
+                  <td>
+                    <span class="status checked">
+                      <i class="fa-solid fa-circle"></i>
+                      Checked In
+                    </span>
+                  </td>
+
+                  <td>
+                    <button class="action-btn">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="attendee-info">
+                      <div class="attendee-avatar avatar-four">
+                        SN
+                      </div>
+
+                      <div>
+                        <strong>Sneha Nepal</strong>
+                        <p>Participant</p>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>sneha@gmail.com</td>
+
+                  <td>July 23, 2026</td>
+
+                  <td>
+                    <span class="status pending">
+                      <i class="fa-solid fa-circle"></i>
+                      Pending
+                    </span>
+                  </td>
+
+                  <td>
+                    <button class="action-btn">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- PAGINATION -->
+          <div class="pagination">
+            <p>Showing 1–4 of 128 attendees</p>
+
+            <div class="page-buttons">
+              <button>
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+
+              <button class="active-page">1</button>
+              <button>2</button>
+              <button>3</button>
+
+              <button>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </section>
+
+      </main>
+    </div>
+  </body>
+</html>
