@@ -51,10 +51,7 @@ app.post('/api/login', (req, res) => {
     return res.status(500).json({ success: false, message: 'Something went wrong.' });
   }
 });
- 
-// ---------- EVENTS ----------
 
-// GET /api/events?search=  -> list all events (event.html)
 app.get('/api/events', (req, res) => {
   const search = req.query.search || '';
   try {
@@ -74,7 +71,6 @@ app.get('/api/events', (req, res) => {
   }
 });
 
-// GET /api/events/:id -> single event
 app.get('/api/events/:id', (req, res) => {
   try {
     const event = db.prepare('SELECT * FROM events WHERE id = ?').get(req.params.id);
@@ -86,7 +82,6 @@ app.get('/api/events/:id', (req, res) => {
   }
 });
 
-// POST /api/events -> create event (addEvent.html)
 app.post('/api/events', (req, res) => {
   const { name, description, date, time, location } = req.body;
   if (!name || !description || !date || !time || !location) {
@@ -104,7 +99,6 @@ app.post('/api/events', (req, res) => {
   }
 });
 
-// PUT /api/events/:id -> edit event
 app.put('/api/events/:id', (req, res) => {
   try {
     const existing = db.prepare('SELECT * FROM events WHERE id = ?').get(req.params.id);
@@ -129,7 +123,6 @@ app.put('/api/events/:id', (req, res) => {
   }
 });
 
-// DELETE /api/events/:id
 app.delete('/api/events/:id', (req, res) => {
   try {
     const existing = db.prepare('SELECT id FROM events WHERE id = ?').get(req.params.id);
@@ -142,9 +135,6 @@ app.delete('/api/events/:id', (req, res) => {
   }
 });
 
-// ---------- ATTENDEES / REGISTRATION ----------
-
-// POST /api/events/:id/register -> registration.html form submit
 app.post('/api/events/:id/register', (req, res) => {
   const { name, email, phone, ticketType } = req.body;
   if (!name || !email || !phone || !ticketType) {
@@ -166,7 +156,6 @@ app.post('/api/events/:id/register', (req, res) => {
   }
 });
 
-// GET /api/events/:id/attendees?search=  -> attendees.html table
 app.get('/api/events/:id/attendees', (req, res) => {
   const search = req.query.search || '';
   try {
@@ -184,7 +173,6 @@ app.get('/api/events/:id/attendees', (req, res) => {
   }
 });
 
-// GET /api/events/:id/stats -> stat cards on attendees.html
 app.get('/api/events/:id/stats', (req, res) => {
   try {
     const total = db.prepare('SELECT COUNT(*) AS count FROM attendees WHERE event_id = ?').get(req.params.id).count;
@@ -198,22 +186,6 @@ app.get('/api/events/:id/stats', (req, res) => {
   }
 });
 
-// PATCH /api/attendees/:id/checkin -> toggle checked-in status
-app.patch('/api/attendees/:id/checkin', (req, res) => {
-  try {
-    const attendee = db.prepare('SELECT * FROM attendees WHERE id = ?').get(req.params.id);
-    if (!attendee) return res.status(404).json({ success: false, message: 'Attendee not found.' });
-
-    const newStatus = attendee.status === 'checked_in' ? 'pending' : 'checked_in';
-    db.prepare('UPDATE attendees SET status = ? WHERE id = ?').run(newStatus, req.params.id);
-    return res.json({ success: true, message: 'Status updated.', data: { ...attendee, status: newStatus } });
-  } catch (err) {
-    console.error('Check-in error:', err);
-    return res.status(500).json({ success: false, message: 'Something went wrong.' });
-  }
-});
-
-// DELETE /api/attendees/:id
 app.delete('/api/attendees/:id', (req, res) => {
   try {
     const existing = db.prepare('SELECT id FROM attendees WHERE id = ?').get(req.params.id);
@@ -226,9 +198,6 @@ app.delete('/api/attendees/:id', (req, res) => {
   }
 });
 
-// ---------- DASHBOARD ----------
-
-// GET /api/dashboard/summary -> cards + recent events table on dashboard.html
 app.get('/api/dashboard/summary', (req, res) => {
   try {
     const totalEvents = db.prepare('SELECT COUNT(*) AS count FROM events').get().count;
