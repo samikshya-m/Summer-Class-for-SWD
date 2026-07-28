@@ -316,6 +316,10 @@ label {
   background-color: #f7f3ec;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
 /* ================= LOGIN LINK ================= */
 
 .signup {
