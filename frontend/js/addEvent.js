@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
 
       window.location.href = "event.html";
-
     } catch (error) {
       console.error(error);
       alert("Something went wrong.");

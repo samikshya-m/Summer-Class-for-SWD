@@ -64,17 +64,23 @@
         </header>
 
         <div class="form-card">
-          <form>
+          <form id="eventForm">
             <div class="input-group">
               <label>Event Name</label>
 
-              <input type="text" placeholder="Enter event name" required />
+              <input
+                type="text"
+                id="eventName"
+                placeholder="Enter event name"
+                required
+              />
             </div>
 
             <div class="input-group">
               <label>Description</label>
 
               <textarea
+                id="description"
                 rows="5"
                 placeholder="Write event description..."
                 required
@@ -85,32 +91,36 @@
               <div class="input-group">
                 <label>Date</label>
 
-                <input type="date" required />
+                <input type="date" id="date" required />
               </div>
 
               <div class="input-group">
                 <label>Time</label>
 
-                <input type="time" required />
+                <input type="time" id="time" required />
               </div>
             </div>
 
             <div class="input-group">
               <label>Location</label>
 
-              <input type="text" placeholder="Enter event location" required />
+              <input
+                type="text"
+                id="location"
+                placeholder="Enter event location"
+                required
+              />
             </div>
 
             <div class="buttons">
               <button type="submit" class="save">
                 <i class="fa-solid fa-floppy-disk"></i>
-
                 Save Event
               </button>
 
               <button type="reset" class="reset">Reset</button>
 
-              <a href="event-list.html" class="cancel"> Cancel </a>
+              <a href="event.html" class="cancel"> Cancel </a>
             </div>
           </form>
         </div>
