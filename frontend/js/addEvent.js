@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const eventId = params.get("id");
   const form = document.getElementById("eventForm");
 
+  if (eventId) {
+    loadEvent();
+  }
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -24,8 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/api/events", {
-        method: "POST",
+      const url = eventId
+        ? `http://localhost:3000/api/events/${eventId}`
+        : "http://localhost:3000/api/events";
+
+      const method = eventId ? "PUT" : "POST";
+
+      const response = await fetch(url, {
+        method,
         headers: {
           "Content-Type": "application/json",
         },
@@ -35,11 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await response.json();
 
       if (!response.ok) {
-        alert(data.message || "Failed to create event.");
+        alert(data.message || "Operation failed.");
         return;
       }
 
-      alert("Event created successfully!");
+      alert(
+        eventId ? "Event updated successfully!" : "Event created successfully!",
+      );
 
       form.reset();
 
@@ -49,4 +62,26 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Something went wrong.");
     }
   });
+  async function loadEvent() {
+    try {
+      const response = await fetch(
+        `http://localhost:3000/api/events/${eventId}`,
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        alert(data.message);
+        return;
+      }
+
+      document.getElementById("eventName").value = data.data.name;
+      document.getElementById("description").value = data.data.description;
+      document.getElementById("date").value = data.data.date;
+      document.getElementById("time").value = data.data.time;
+      document.getElementById("location").value = data.data.location;
+    } catch (error) {
+      console.error(error);
+    }
+  }
 });
